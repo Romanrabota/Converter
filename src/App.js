@@ -24,22 +24,15 @@ changeHandler = ({target:{value,dolar,grivna,name,}}) =>{
     })
 }
 
-changeHandler1 = ({target:{value,name,}}) =>{
-  this.setState ({
-       [name]:Number(value),  
-
-  })
-}
-
 
 
 render(){
 return (
    <>
  <label>Гривна</label>
- <input type="text" placeholder='Введите количесто гривен' name="grivna" value={this.state.grivna} onChange={this.changeHandler1}></input> 
+ <input type="text" placeholder='Введите количесто гривен' name="grivna" value={this.state.grivna} onChange={this.changeHandler}></input> 
  <label>Доллар</label>
- <input type="text" placeholder='Введите количество доларов'  name="dolar" value={this.state.grivna/this.kurs} onChange={this.changeHandler}></input>
+ <input type="text" placeholder='Введите количество доларов'  name="dolar" value={this.state.grivna/this.kurs}></input>
   </>
 )
 }
